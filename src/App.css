@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+
 .color-nav {
   background-color: #355e45;
+}
+
+.props-logo {
+  width: 150px;
+  height: auto; 
+}
+
+.navbar {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 500;
+  font-size: 17px !important;
 }
 
 .App {
@@ -42,4 +55,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.plant-page-container {
+  position: absolute;
 }

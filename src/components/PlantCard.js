@@ -5,7 +5,7 @@ export default function PlantCard({plant}) {
 
     function handleClick(event){
         return(
-            <PlantPageContainer />
+            <PlantPageContainer plant={plant}/>
         )
     }
 
@@ -13,7 +13,7 @@ export default function PlantCard({plant}) {
         <div>
             <div className="plant-card">
                 <img 
-                    alt="plant"
+                    alt={plant.name}
                     src={plant.img}
                     className="plant-image"
                     onClick={handleClick}
