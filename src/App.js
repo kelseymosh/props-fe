@@ -1,28 +1,26 @@
-import { Component } from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import PlantsContainer from "./containers/PlantsContainer";
-import MyNavbar from "./components/MyNavbar";
+import AllPlantsContainer from './containers/AllPlantsContainer';
+import PlantPageContainer from './containers/PlantPageContainer';
+import ListPlantContainer from './containers/ListPlantContainer';
+import MyNavbar from './components/MyNavbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-class App extends Component {
-  state = {
-    plants:[],
-  }
+function App() {
 
-  componentDidMount(){
-    fetch('http://localhost:8000/plants/')
-      .then(response => response.json())
-      .then(plants => this.setState({plants}))
-  }
-
-  render(){
-    return (
+  return (
+    <Router>
       <div className="App">
-        <MyNavbar />
-        <PlantsContainer plants={this.state.plants} />
+          <MyNavbar />
+            <Switch>
+              {/* <Route path="/" exact component={App} /> */}
+              <Route path="/listplant" component={ListPlantContainer} />
+              <Route path="/plants" exact component={AllPlantsContainer}/>
+              <Route path="/plants/:id" component={PlantPageContainer} />
+            </Switch>
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;
