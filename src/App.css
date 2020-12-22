@@ -69,3 +69,14 @@ body {
   height: 330px;
   position: relative;
 }
+
+form {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 350px;
+}
+
+.list-plant-form {
+  font-family: 'Raleway', sans-serif;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import ListPlantForm from '../components/ListPlantForm'
 
 export default function ListPlantContainer() {
     return (
         <div>
-            <h1>list plant</h1>
+            <ListPlantForm />
         </div>
     )
 }

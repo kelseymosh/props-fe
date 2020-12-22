@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropsLogo from '../images/PropsLogo.png'
 
 export default function MyNavbar() {
@@ -12,12 +12,12 @@ export default function MyNavbar() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="listplant">LIST PLANT</Nav.Link>
-                        <Nav.Link href="plants">SEE PLANTS</Nav.Link>
-                        <Nav.Link href="messages">MESSAGES</Nav.Link>
+                        <Nav.Link as={Link} to="/listplant">LIST PLANT</Nav.Link>
+                        <Nav.Link as={Link} to="/plants">SEE PLANTS</Nav.Link>
+                        <Nav.Link as={Link} to="/messages">MESSAGES</Nav.Link>
                         </Nav>
                             <Nav>
-                                <Nav.Link href="profile">PROFILE</Nav.Link>
+                                <Nav.Link as={Link} to="profile">PROFILE</Nav.Link>
                             </Nav>
                 </Navbar.Collapse>
             </Navbar>
