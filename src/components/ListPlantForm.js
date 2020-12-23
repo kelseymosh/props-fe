@@ -26,8 +26,10 @@ export default function ListPlantForm() {
 
     return (
         <form className="list-plant-form" onSubmit={handleSubmit}>
+            {/* <input type="hidden" value="something" /> */}
             <label>Plant Name</label>
                 <input
+                    autoComplete="off"
                     type="text"
                     name="name"
                     value={name}
@@ -35,6 +37,7 @@ export default function ListPlantForm() {
                 />
             <label>Image</label>
                 <input
+                    autoComplete="off"
                     type="text"
                     name="img"
                     value={img}
@@ -42,6 +45,7 @@ export default function ListPlantForm() {
                 />
             <label>Description</label>
                 <input
+                    autoComplete="off"
                     type="text"
                     name="description"
                     value={description}
