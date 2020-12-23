@@ -19,9 +19,13 @@ body {
   background-color: #fffdf0 !important;
 }
 
-
 .plant-card, .show-page-card {
   display: flex;
+}
+
+.plant-card {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .plant-image {
@@ -60,6 +64,8 @@ body {
 }
 
 .plant-page-container {
+  display: flex;
+  flex-direction: row;
   margin: 5%;
   font-family: 'Raleway', sans-serif;
 }
@@ -68,6 +74,10 @@ body {
   width: 300px;
   height: 330px;
   position: relative;
+}
+
+.show-page-text {
+  margin-left: 3%;
 }
 
 form {

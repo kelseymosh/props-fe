@@ -13,7 +13,6 @@ function App() {
       <div className="App">
           <MyNavbar />
             <Switch>
-              {/* <Route path="/" exact component={App} /> */}
               <Route path="/listplant" component={ListPlantContainer} />
               <Route path="/plants" exact component={AllPlantsContainer}/>
               <Route path="/plants/:id" component={PlantPageContainer} />

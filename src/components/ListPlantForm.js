@@ -1,45 +1,51 @@
 import React, { useState } from 'react'
 
 export default function ListPlantForm() {
-    const [plant, setPlant] = useState({})
+    const [name, setName] = useState("")
+    const [img, setImage] = useState("")
+    const [description, setDescription] = useState("")
     
     const handleSubmit = (event) => {
         event.preventDefault()
-            fetch('http://localhost:8000/plants/', {
-                method: 'POST',
-                body: JSON.stringify({ 
-                    name: plant.name,
-                    img: plant.img,
-                    description: plant.description
-                }),
-                headers: { 'Content-Type': 'application/json' },
-            })
-            .then(response => response.json())
-            .then(plant => setPlant( plant ))
+        fetch('http://localhost:8000/plants/', {
+            method: 'POST',
+            body: JSON.stringify({ 
+                name: name,
+                img: img,
+                description: description
+            }),
+            headers: { 'Content-Type': 'application/json' },
+        })
+        .then(response => response.json())
+        .then(input => {
+            setName( "" )
+            setImage( "" )
+            setDescription( "" )
+        })
     }
-        
+
     return (
         <form className="list-plant-form" onSubmit={handleSubmit}>
             <label>Plant Name</label>
                 <input
                     type="text"
                     name="name"
-                    value={plant.name}
-                    onChange={event => setPlant({ ...plant, name: event.target.value })}
+                    value={name}
+                    onChange={event => setName( event.target.value )}
                 />
             <label>Image</label>
                 <input
                     type="text"
                     name="img"
-                    value={plant.img}
-                    onChange={event => setPlant({ ...plant, img: event.target.value })}
+                    value={img}
+                    onChange={event => setImage( event.target.value )}
                 />
             <label>Description</label>
                 <input
                     type="text"
                     name="description"
-                    value={plant.description}
-                    onChange={event => setPlant({ ...plant, description: event.target.value })}
+                    value={description}
+                    onChange={event => setDescription( event.target.value )}
                 />
             <input type="submit" value="Add Plant" />
         </form>

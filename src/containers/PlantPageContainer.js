@@ -20,8 +20,8 @@ export default function PlantPageContainer({ match }) {
                 <img className="show-page-image" src={`${plant.img}`} alt={`${plant.name}`} />
                 <div className="like-button">♥</div>
             </span>
-            <h2>{`${plant.name}`}</h2>
-            <span className="show-page-comments">
+            <span className="show-page-text">
+                <h2>{`${plant.name}`}</h2>
                 <p>{`${plant.description}`}</p>
             </span>
         </div>
