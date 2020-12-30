@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 .color-nav {
   background-color: #355e45 !important;
@@ -10,13 +11,13 @@
 }
 
 .navbar {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Abril Fatface', cursive !important;
   font-weight: 500;
   font-size: 17px !important;
 }
 
 body {
-  background-color: #fffdf0 !important;
+  background-color: #f1f0e4 !important;
 }
 
 .plant-card, .show-page-card {
@@ -37,7 +38,7 @@ body {
 }
 
 .like-button {
-  color: rgb(255, 127, 80);
+  color: #fd9f7c;
   font-size: 2.0rem;
   border: none;
   background: none;
@@ -47,11 +48,11 @@ body {
 }
 
 .like-button:hover {
-  color: rgb(241, 71, 19);
+  color: #e65f40;
 }
 
 .like-button:active {
-  color: rgb(253, 159, 124);
+  color: #fd9f7c;
 }
 
 .all-plants-container {
@@ -61,6 +62,12 @@ body {
   justify-content: space-around;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+.plant-card {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
 }
 
 .plant-page-container {
@@ -78,15 +85,61 @@ body {
 
 .show-page-text {
   margin-left: 3%;
+  color: #1e3e25;
+}
+
+.login-page-container, .list-plant-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-plant-image, .login-page-image{
+  margin-top: 3%;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 500px;
+  height: auto;
 }
 
 form {
   display: flex;
   margin: auto;
+  margin-top: 5%;
   flex-direction: column;
   width: 350px;
+  color: #7d7a75;
+  /* color: #9e604a; */
 }
 
-.list-plant-form {
+input {
+  margin-bottom: 10px;
   font-family: 'Raleway', sans-serif;
 }
+
+label {
+  font-family: 'Abril Fatface', cursive;
+}
+
+input:focus {
+  border-style: solid !important;
+  border-color: #a85b3f !important;
+}
+
+.password-input, .description-input {
+  margin-bottom: 30px;
+}
+
+.submit-button {
+  background-color: #264d2e;
+  color: white;
+  font-family: 'Abril Fatface', cursive !important;
+}
+
+.submit-button:hover {
+  background-color: #224529;
+}
+
+.description-input {
+  padding: 0 0 100px 0;
+}
+

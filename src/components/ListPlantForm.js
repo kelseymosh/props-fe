@@ -27,31 +27,35 @@ export default function ListPlantForm() {
     return (
         <form className="list-plant-form" onSubmit={handleSubmit}>
             {/* <input type="hidden" value="something" /> */}
-            <label>Plant Name</label>
+            <label>plant name</label>
                 <input
+                    spellcheck="false"
                     autoComplete="off"
                     type="text"
                     name="name"
                     value={name}
                     onChange={event => setName( event.target.value )}
                 />
-            <label>Image</label>
+            <label>image</label>
                 <input
+                    spellcheck="false"
                     autoComplete="off"
                     type="text"
                     name="img"
                     value={img}
                     onChange={event => setImage( event.target.value )}
                 />
-            <label>Description</label>
-                <input
+            <label>description</label>
+                <textarea
+                    className="description-input"
+                    spellcheck="false"
                     autoComplete="off"
                     type="text"
                     name="description"
                     value={description}
                     onChange={event => setDescription( event.target.value )}
                 />
-            <input type="submit" value="Add Plant" />
+            <input className="submit-button" type="submit" value="add plant" />
         </form>
     );
 }
