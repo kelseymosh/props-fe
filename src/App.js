@@ -14,48 +14,47 @@ export default class App extends Component {
   }
 
   login = (username, password) => {
-    fetch('http://localhost:8000/api/token/', {
+    fetch('http://localhost:8000/login/', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            user: {
-              username,
-              password
-            }
-        })
+        body: JSON.stringify(
+          {
+            username: username,
+            password: password
+          }
+        )
     })
     .then(response => response.json())
     .then(result => {
-        if(result.token){
-          localStorage.setItem('token', result.token)
+        if(result.access){
+          localStorage.setItem('token', result.access)
           this.setState({
-            user: result.user
+            user: {
+              username: username,
+              password: password,
+            }
           })
       } else {
-        // this.setState({
-        //   error: result
-      // })
-    }
+        console.log("nice try asshole")
+      }
     })
   }
+
+  
 
   render() {
     return (
       <div className='App'>
-        {this.state.user.username
-        ? <h2>Welcome {this.state.user.fullname}</h2>
-        : null
-        }
         <Router>
-          <MyNavbar />
+          <MyNavbar user={this.state.user} />
             <Switch>
               <Route path='/' exact 
-                render={() => (<LoginContainer login={this.login} />)}
+                render={() => (<LoginContainer login={this.login} user={this.state.user} />)}
               />
               <Route path='/listplant' component={ListPlantContainer} />
-              <Route path='/plants' exact component={AllPlantsContainer}/>
+              <Route path='/plants' exact component={AllPlantsContainer} />
               <Route path='/plants/:id' component={PlantPageContainer} />
             </Switch>
         </Router>

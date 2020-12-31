@@ -23,8 +23,9 @@ export default function PlantPageContainer({ match }) {
                         <div className="like-button">♥</div>
                     </span>
                     <span className="show-page-text">
-                        <h2>{`${plant.name}`}</h2>
+                        <h2 className="plant-name-text">{`${plant.name}`}</h2>
                         <p>{`${plant.description}`}</p>
+                        <hr></hr>
                     </span>
                 </div>
                 : null

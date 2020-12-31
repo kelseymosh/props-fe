@@ -29,7 +29,7 @@ export default function ListPlantForm() {
             {/* <input type="hidden" value="something" /> */}
             <label>plant name</label>
                 <input
-                    spellcheck="false"
+                    spellCheck="false"
                     autoComplete="off"
                     type="text"
                     name="name"
@@ -38,7 +38,7 @@ export default function ListPlantForm() {
                 />
             <label>image</label>
                 <input
-                    spellcheck="false"
+                    spellCheck="false"
                     autoComplete="off"
                     type="text"
                     name="img"
@@ -48,7 +48,7 @@ export default function ListPlantForm() {
             <label>description</label>
                 <textarea
                     className="description-input"
-                    spellcheck="false"
+                    spellCheck="false"
                     autoComplete="off"
                     type="text"
                     name="description"
