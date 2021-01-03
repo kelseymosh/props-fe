@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-export default function LoginForm({login, user}) {
+export default function LoginForm({login}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
@@ -28,6 +29,7 @@ export default function LoginForm({login, user}) {
                     onChange={event => setPassword(event.target.value)}
                 />
             <input className="submit-button" type="submit" value="login"></input>
+                <p className="signup-prompt">don't have a login? sign up <Link className="signup-link" to={'/signup'}>here</Link></p>
         </form>
     )
 }

@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import PropsLogo from '../images/PropsLogo.png'
+import ProfileImage from '../images/ProfileImage.jpg'
 
 export default function MyNavbar({user}) {
     return (
@@ -19,8 +20,16 @@ export default function MyNavbar({user}) {
                             <Nav>
                                 <Nav.Link as={Link} to="profile">
                                     {user.username
-                                    ? <h3>Welcome {user.username}</h3>
-                                    : <h3>login to start trading</h3>
+                                    ? <div>
+                                        <img
+                                        className="user-avatar" 
+                                        src={ProfileImage} 
+                                        alt="user" />
+                                    </div>
+                                    : <img
+                                        className="user-avatar" 
+                                        src="https://icon-library.net/images/no-user-image-icon/no-user-image-icon-27.jpg" 
+                                        alt="no user" />
                                     }               
                                 </Nav.Link>
                             </Nav>

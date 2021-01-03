@@ -5,6 +5,7 @@ import AllPlantsContainer from './containers/AllPlantsContainer';
 import PlantPageContainer from './containers/PlantPageContainer';
 import ListPlantContainer from './containers/ListPlantContainer';
 import LoginContainer from './containers/LoginContainer';
+import SignUpContainer from './containers/SignUpContainer';
 import MyNavbar from './components/MyNavbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -36,6 +37,11 @@ export default class App extends Component {
               password: password,
             }
           })
+            // componentDidMount(){
+            //   fetch('http://localhost:8000/users/')
+            //     .then(response => response.json())
+            //     .then(result => this.setState({users:result}))
+            // };
       } else {
         console.log("nice try asshole")
       }
@@ -51,11 +57,12 @@ export default class App extends Component {
           <MyNavbar user={this.state.user} />
             <Switch>
               <Route path='/' exact 
-                render={() => (<LoginContainer login={this.login} user={this.state.user} />)}
+                render={() => (<LoginContainer login={this.login} />)}
               />
               <Route path='/listplant' component={ListPlantContainer} />
               <Route path='/plants' exact component={AllPlantsContainer} />
               <Route path='/plants/:id' component={PlantPageContainer} />
+              <Route path='/signup' component={SignUpContainer} />
             </Switch>
         </Router>
 

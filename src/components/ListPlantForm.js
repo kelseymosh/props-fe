@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export default function ListPlantForm() {
     const [name, setName] = useState("")
     const [img, setImage] = useState("")
+    const [wishlist, setWishlist] = useState("")
     const [description, setDescription] = useState("")
     
     const handleSubmit = (event) => {
@@ -12,7 +13,8 @@ export default function ListPlantForm() {
             body: JSON.stringify({ 
                 name: name,
                 img: img,
-                description: description
+                description: description,
+                wishlist: wishlist
             }),
             headers: { 'Content-Type': 'application/json' },
         })
@@ -20,6 +22,7 @@ export default function ListPlantForm() {
         .then(input => {
             setName( "" )
             setImage( "" )
+            setWishlist( "" )
             setDescription( "" )
         })
     }
@@ -44,6 +47,15 @@ export default function ListPlantForm() {
                     name="img"
                     value={img}
                     onChange={event => setImage( event.target.value )}
+                />
+            <label>plant wishlist</label>
+                <input
+                    spellCheck="false"
+                    autoComplete="off"
+                    type="text"
+                    name="wishlist"
+                    value={wishlist}
+                    onChange={event => setWishlist( event.target.value )}
                 />
             <label>description</label>
                 <textarea

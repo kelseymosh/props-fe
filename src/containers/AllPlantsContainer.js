@@ -17,7 +17,7 @@ export default function PlantsContainer() {
 
     return (
         <div className="all-plants-container">
-            {plants.map(plant => (
+            {plants.slice(0).reverse().map(plant => (
                 <PlantCard key={plant.id} plant={plant} />
             ))}
         </div>
