@@ -27,6 +27,15 @@ body {
   height: auto;
 }
 
+.welcome-user {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #FFFFFF80;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 15%;
+}
+
 .plant-card, .show-page-card {
   display: flex;
 }

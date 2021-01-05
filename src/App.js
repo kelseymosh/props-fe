@@ -32,16 +32,18 @@ export default class App extends Component {
         if(result.access){
           localStorage.setItem('token', result.access)
           this.setState({ user: { username, password } })
-          // fetch('http://localhost:8000/profile/')
-          //   .then(response => response.json())
-          //   .then(result => console.log(result))
+          fetch('http://localhost:8000/profile/', {
+            headers: {
+              'Authorization': `Bearer ${result.access}`
+            },
+          }) 
+            .then(response => response.json())
+            .then(result => this.setState({ user: result }))
       } else {
         console.log("nice try asshole")
       }
     })
   }
-
-  
 
   render() {
     return (
