@@ -7,7 +7,7 @@ export default function ListPlantContainer() {
             <ListPlantForm />
             <img
                 className="list-plant-image" 
-                src="https://i.pinimg.com/originals/1c/f1/77/1cf177b9dd23ff04497b94f365cd0881.jpg" 
+                src="https://thatplantylife.com/wp-content/uploads/2020/01/Rhaphidophora-tetrasperma-ginny-philodendron-Mini-monstera-Bright-light-houseplants-best-houseplants-easy-houseplants-houseplant-care-guide-Rhaphidophora-tetrasperma-care-amazing-houseplants.jpeg" 
                 alt="houseplants"
             />
         </div>

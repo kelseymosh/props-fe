@@ -22,8 +22,8 @@ export default class App extends Component {
         },
         body: JSON.stringify(
           {
-            username: username,
-            password: password
+            username,
+            password
           }
         )
     })
@@ -31,17 +31,10 @@ export default class App extends Component {
     .then(result => {
         if(result.access){
           localStorage.setItem('token', result.access)
-          this.setState({
-            user: {
-              username: username,
-              password: password,
-            }
-          })
-            // componentDidMount(){
-            //   fetch('http://localhost:8000/users/')
-            //     .then(response => response.json())
-            //     .then(result => this.setState({users:result}))
-            // };
+          this.setState({ user: { username, password } })
+          // fetch('http://localhost:8000/profile/')
+          //   .then(response => response.json())
+          //   .then(result => console.log(result))
       } else {
         console.log("nice try asshole")
       }

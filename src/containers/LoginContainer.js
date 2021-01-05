@@ -6,7 +6,7 @@ export default function LoginContainer({login}) {
         <div className="login-page-container">
             <img 
                 className="login-page-image"
-                src="https://thatplantylife.com/wp-content/uploads/2020/05/houseplant-inspiration-Plant-shelfie-Houseplants-Best-houseplants-Houseplant-swap-How-to-ship-houseplants-mini-monstera.jpg" 
+                src="https://i.pinimg.com/originals/1c/f1/77/1cf177b9dd23ff04497b94f365cd0881.jpg" 
                 alt="plant shelf"
             />
             <LoginForm login={login}/>
