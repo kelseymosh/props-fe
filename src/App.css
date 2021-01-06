@@ -94,8 +94,8 @@ body {
 }
 
 .show-page-image {
-  width: 300px;
-  height: 330px;
+  width: 350px;
+  height: auto;
   position: relative;
 }
 
@@ -109,6 +109,11 @@ body {
 }
 
 .wishlist-text {
+  margin-top: -2%;
+}
+
+.contact-trader-form {
+  margin-right: 0%;
   margin-top: -2%;
 }
 
@@ -127,7 +132,7 @@ hr {
   margin-top: 3%;
   margin-right: 5%;
   margin-left: 5%;
-  width: 500px;
+  width: 550px;
   height: auto;
 }
 
@@ -143,7 +148,8 @@ form {
 
 input {
   margin-bottom: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif !important;
+  color: #403f3c;
 }
 
 .contact-input {
@@ -152,11 +158,6 @@ input {
 
 label, .plant-name-text, .wishlist {
   font-family: 'Abril Fatface', cursive;
-}
-
-input:focus {
-  border-style: solid !important;
-  border-color: #a3543d !important;
 }
 
 .password-input, .description-input{
@@ -180,7 +181,7 @@ input:focus {
 }
 
 .signup-link{
-  color: #a3543d;
+  color: #a85b3f;
   font-size: 15px;
   font-weight: bold
 }
@@ -190,6 +191,13 @@ input:focus {
   font-weight: bold
 }
 
+.plant-icon {
+  width: 15px;
+  height: auto;
+}
+
 .description-input {
   padding: 0 0 100px 0;
+  font-family: 'Raleway', sans-serif !important;
+  color: #403f3c;
 }

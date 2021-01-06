@@ -29,7 +29,6 @@ export default function ListPlantForm() {
 
     return (
         <form className="list-plant-form" onSubmit={handleSubmit}>
-            {/* <input type="hidden" value="something" /> */}
             <label>plant name</label>
                 <input
                     spellCheck="false"

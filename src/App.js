@@ -40,7 +40,7 @@ export default class App extends Component {
             .then(response => response.json())
             .then(result => this.setState({ user: result }))
       } else {
-        console.log("nice try asshole")
+        
       }
     })
   }
@@ -60,7 +60,6 @@ export default class App extends Component {
               <Route path='/signup' component={SignUpContainer} />
             </Switch>
         </Router>
-
       </div>
     );
   }

@@ -28,7 +28,7 @@ export default function PlantPageContainer({ match }) {
                         <hr></hr>
                             <p className="wishlist">trader's wishlist:</p>
                                 <p className="wishlist-text">{`${plant.wishlist}`}</p>
-                            <form>
+                            <form className="contact-trader-form">
                                 <label>contact the trader</label>
                                     <textarea className="contact-input"/>
                                 <input className="submit-button" type="submit" value="message" />

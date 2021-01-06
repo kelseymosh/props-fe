@@ -1,5 +1,6 @@
 import React from 'react'
 import ListPlantForm from '../components/ListPlantForm'
+import ListPlant from '../images/ListPlant.jpg'
 
 export default function ListPlantContainer() {
     return (
@@ -7,7 +8,7 @@ export default function ListPlantContainer() {
             <ListPlantForm />
             <img
                 className="list-plant-image" 
-                src="https://thatplantylife.com/wp-content/uploads/2020/01/Rhaphidophora-tetrasperma-ginny-philodendron-Mini-monstera-Bright-light-houseplants-best-houseplants-easy-houseplants-houseplant-care-guide-Rhaphidophora-tetrasperma-care-amazing-houseplants.jpeg" 
+                src={ListPlant} 
                 alt="houseplants"
             />
         </div>

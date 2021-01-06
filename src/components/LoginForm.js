@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PlantIcon from '../images/PlantIcon.png'
 
 export default function LoginForm({login}) {
     const [username, setUsername] = useState("")
@@ -29,7 +30,10 @@ export default function LoginForm({login}) {
                     onChange={event => setPassword(event.target.value)}
                 />
             <input className="submit-button" type="submit" value="login"></input>
-                <p className="signup-prompt">don't have a login? sign up <Link className="signup-link" to={'/signup'}>here</Link></p>
+                <span className="signup-prompt">
+                    <img className="plant-icon" src={PlantIcon} alt="plant icon"/>
+                    <p style={{marginTop:"-1%"}}>grow with us. sign up <Link className="signup-link" to={'/signup'}>here</Link></p>
+                </span>
         </form>
     )
 }

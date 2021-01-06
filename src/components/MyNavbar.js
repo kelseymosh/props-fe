@@ -31,8 +31,7 @@ export default function MyNavbar({user}) {
                             <Nav.Link as={Link} to="profile">
                                 <img
                                     className="user-avatar" 
-                                    src={`${user.profile_img}`}
-                                    alt="user" />
+                                    src={`${user.profile_img}`} />
                             </Nav.Link> 
                             : 
                             <Nav.Link as={Link} to="/">
