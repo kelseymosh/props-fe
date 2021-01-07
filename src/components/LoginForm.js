@@ -15,7 +15,9 @@ export default function LoginForm({login}) {
         <form onSubmit={handleSubmit}>
             <label>username</label>
                 <input
+                    className="username-input"
                     autoComplete="off" 
+                    type="text"
                     name="username" 
                     value={username} 
                     onChange={event => setUsername(event.target.value)}

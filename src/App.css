@@ -17,8 +17,7 @@
 }
 
 body {
-  background-color: #f1f0e4 !important;
-  /* background-color: #fdf8ef !important; */
+  background-color: #fcfaf5!important; 
 }
 
 .user-avatar {
@@ -118,7 +117,6 @@ body {
 }
 
 hr {
-  /* background-color: #a85b3f; */
   background-color: #224529;
   opacity: 30%;
 }
@@ -150,10 +148,42 @@ input {
   margin-bottom: 10px;
   font-family: 'Raleway', sans-serif !important;
   color: #403f3c;
+  border-radius: 0%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #7d7a75;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+textarea {
+  border-radius: 0%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #7d7a75;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none !important;
+  border-style: solid !important;
+  border-color: #e0ac98!important;
+  border-width: 2px !important;
+  border-radius: 0% !important;
+}
+
+::placeholder {
+  opacity: 60%;
+}
+
+.username-input, .password-input {
+  padding: 10px !important;
+  height: 45px;
+  width: auto;
 }
 
 .contact-input {
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 label, .plant-name-text, .wishlist {
@@ -166,7 +196,7 @@ label, .plant-name-text, .wishlist {
 
 .submit-button {
   background-color: #264d2e;
-  color: white;
+  color: #FFFFFF;
   font-family: 'Abril Fatface', cursive !important;
 }
 
@@ -181,13 +211,13 @@ label, .plant-name-text, .wishlist {
 }
 
 .signup-link{
-  color: #a85b3f;
+  color: #ce7d5d;
   font-size: 15px;
   font-weight: bold
 }
 
 .signup-link:hover {
-  color: #ce7d5d;
+  color: #e0ac98;
   font-weight: bold
 }
 
@@ -197,7 +227,10 @@ label, .plant-name-text, .wishlist {
 }
 
 .description-input {
-  padding: 0 0 100px 0;
   font-family: 'Raleway', sans-serif !important;
   color: #403f3c;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 100px;
 }

@@ -26,11 +26,11 @@ export default function PlantPageContainer({ match }) {
                         <h2 className="plant-name-text">{`${plant.name}`}</h2>
                         <p>{`${plant.description}`}</p>
                         <hr></hr>
-                            <p className="wishlist">trader's wishlist:</p>
+                            <p className="wishlist">{`${plant.listing_user}`}'s wishlist:</p>
                                 <p className="wishlist-text">{`${plant.wishlist}`}</p>
                             <form className="contact-trader-form">
                                 <label>contact the trader</label>
-                                    <textarea className="contact-input"/>
+                                    <textarea className="contact-input" type="text" />
                                 <input className="submit-button" type="submit" value="message" />
                             </form>
                     </span>

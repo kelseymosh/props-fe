@@ -64,6 +64,7 @@ export default function ListPlantForm() {
                     type="text"
                     name="description"
                     value={description}
+                    placeholder="what would be helpful for the new plant owner to know? ex. what kind of lighting this plant likes or the best soil mix"
                     onChange={event => setDescription( event.target.value )}
                 />
             <input className="submit-button" type="submit" value="add plant" />

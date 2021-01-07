@@ -31,7 +31,7 @@ export default class App extends Component {
     .then(result => {
         if(result.access){
           localStorage.setItem('token', result.access)
-          this.setState({ user: { username, password } })
+          // this.setState({ user: { username, password } })
           fetch('http://localhost:8000/profile/', {
             headers: {
               'Authorization': `Bearer ${result.access}`
@@ -56,7 +56,7 @@ export default class App extends Component {
               />
               <Route path='/listplant' component={ListPlantContainer} />
               <Route path='/plants' exact component={AllPlantsContainer} />
-              <Route path='/plants/:id' component={PlantPageContainer} />
+              <Route path='/plants/:id' component={PlantPageContainer}/>
               <Route path='/signup' component={SignUpContainer} />
             </Switch>
         </Router>
