@@ -21,7 +21,7 @@ Want to increase your houseplant collection while saving money? Props is a web a
      style="float: left; margin-right: 10px;" />
 
 ## Technologies
-I used React for the frontend and Django for the backend with a Postgres database
+I used React for the frontend and Django for the <a href="https://github.com/kelseymosh/props-be">backend</a> with a Postgres database
 
 ## Author
 <a href="https://github.com/kelseymosh"> Kelsey Oshiro</a>
